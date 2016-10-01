@@ -44,8 +44,9 @@ function loadData(id, callback) {
 			}
 		})
 		.done(function(data) {
-			if (data.success)
+			if (data.success) {
 				callback(data.articles);
+			}
 		});
 	console.log(id);
 }
