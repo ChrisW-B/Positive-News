@@ -1,0 +1,9 @@
+<ul>
+    <% for(var i=0; i<articles.length; i++) { %>
+        <li>
+           <a href="<%= articles[i].url %>" title=""> <%= articles[i].title %></a> <br/>
+            <%= articles[i].description %>
+            (Score: <%= articles[i].score %>)
+        </li>
+    <% } %>
+</ul>

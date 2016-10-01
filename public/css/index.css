@@ -1,0 +1,12 @@
+.list-group-item {
+	float: left;
+  	min-width: 180px;
+	text-align: center;
+	border-radius: 4px;
+	margin: 2px;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
+}

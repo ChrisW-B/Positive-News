@@ -1,0 +1,31 @@
+{
+  "name": "positive-news",
+  "version": "0.0.1",
+  "description": "Uses news-api-njs and sentiment to find positive news stories",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisW-B/Positive-News.git"
+  },
+  "keywords": [
+    "news",
+    "sentiment",
+    "analysis"
+  ],
+  "author": "Chris Barry <me@chrisb.xyz>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisW-B/Positive-News/issues"
+  },
+  "homepage": "https://github.com/ChrisW-B/Positive-News#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "news-api-njs": "^0.1.2",
+    "request": "^2.75.0",
+    "scribe-js": "^2.0.4",
+    "sentiment": "^2.0.0"
+  }
+}
