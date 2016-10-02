@@ -75,8 +75,8 @@ $(document).ready(function() {
 	}
 
 	$(".hideBox").keyup(function() {
+		localStorage.setItem('badWords', $(this).val());
 		placeData(filterArticles($(this).val()));
-		localStorage.badWords = $(this).val();
 	});
 
 	function filterArticles(text) {
