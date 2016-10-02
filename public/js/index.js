@@ -2,6 +2,7 @@ $(document).ready(function() {
 	var articleData = [];
 	var links = $('a[href="#articles"]');
 	var articlesLoc = $('#articles');
+	$(".hideBox").val(localStorage.badWords);
 	$('.grid').masonry({
 		itemSelector: '.list-group-item',
 		gutter: 10
@@ -75,6 +76,7 @@ $(document).ready(function() {
 
 	$(".hideBox").keyup(function() {
 		placeData(filterArticles($(this).val()));
+		localStorage.badWords = $(this).val();
 	});
 
 	function filterArticles(text) {
