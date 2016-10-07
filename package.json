@@ -23,7 +23,7 @@
     "compression": "^1.6.2",
     "ejs": "^2.5.2",
     "express": "^4.14.0",
-    "news-api-njs": "^0.1.2",
+    "news-api-njs": "^0.2.1",
     "request": "^2.75.0",
     "scribe-js": "^2.0.4",
     "sentiment": "^2.0.0"

@@ -32,27 +32,33 @@ app.get('/',
 		news.getSources({
 			language: 'en',
 			country: 'us',
-			callback(response) {
-				res.render('pages/index', {
-					sources: response.sources
-				});
-			}
+		}).then(function(response) {
+			res.render('pages/index', {
+				sources: response.sources
+			});
+		}).catch(function(err) {
+			console.log(err);
 		});
 	});
 app.get('/news',
 	function(req, res) {
 		console.log(req.query.source);
 		news.getArticles({
-			source: req.query.source,
-			callback(response) {
-				response.articles.forEach(function(ele) {
-					ele.score = sentiment(ele.title).score + sentiment(ele.description).score + 20; //no negative scores
-				});
-				response.articles.sort(function(a, b) {
-					return b.score - a.score;
-				});
-				res.send(response);
-			}
+			source: req.query.source
+		}).then(function(response) {
+			response.articles.forEach(function(ele) {
+				var text = [ele.title, ele.description].filter(function(val) {
+					return val;
+				}).join(' '); //avoid giving a null
+				ele.score = sentiment(text).score / text.length;
+			});
+			response.articles.sort(function(a, b) {
+				return b.score - a.score;
+			});
+			response.success = true;
+			res.send(response);
+		}).catch(function(err) {
+			console.log(err);
 		});
 	}
 );

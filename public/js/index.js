@@ -63,8 +63,8 @@ $(document).ready(function() {
 			innerHtml += "<a href='" + articles[i].url + "'' title=''>";
 			innerHtml += articles[i].title;
 			innerHtml += "</a> <br/>";
-			innerHtml += articles[i].description;
-			innerHtml += " (Score: " + articles[i].score + ")";
+			innerHtml += (articles[i].description !== null) ? articles[i].description : "";
+			innerHtml += " (Score: " + Math.round(articles[i].score * 1000) + ")";
 		}
 		innerHtml += "</ul>";
 		var articleList = $('<div />', {
