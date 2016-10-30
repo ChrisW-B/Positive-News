@@ -17,6 +17,7 @@ const ONE_MIN = 60 * 1000,
 
 
 app.set('view engine', 'ejs');
+app.set('views', __dirname + 'views');
 app.use(express.static(__dirname + "/public", {
 	maxAge: ONE_DAY
 }));
