@@ -20,12 +20,23 @@
   "homepage": "https://github.com/ChrisW-B/Positive-News#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "colors": "^1.1.2",
     "compression": "^1.7.0",
     "ejs": "^2.5.7",
     "express": "^4.15.4",
+    "express-winston": "^2.4.0",
     "news-api-njs": "^0.2.1",
     "request": "^2.81.0",
-    "scribe-js": "^2.0.4",
-    "sentiment": "^4.0.0"
+    "sentiment": "^4.0.0",
+    "winston": "^2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.4.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.2.1",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
