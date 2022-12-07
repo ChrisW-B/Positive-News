@@ -23,7 +23,7 @@
     "colors": "^1.1.2",
     "compression": "^1.7.0",
     "ejs": "^2.5.7",
-    "express": "^4.15.4",
+    "express": "^4.17.3",
     "express-winston": "^2.4.0",
     "news-api-njs": "^0.2.1",
     "request": "^2.81.0",
